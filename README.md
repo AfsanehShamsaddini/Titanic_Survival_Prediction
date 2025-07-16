@@ -1,31 +1,43 @@
-Titanic Survival Prediction Using Machine Learning
-Importing Libraries
-In this project, I utilize essential libraries to enhance data manipulation and visualization:
+# 🚢 Titanic Survival Prediction
 
-pandas: For data manipulation and analysis of tabular data.
-numpy: For efficient numerical computations.
-seaborn: To create informative statistical graphics.
-matplotlib.pyplot: For plotting and visualizing data and analysis results.
-Loading Data
-The project begins with loading the dataset from CSV files into pandas DataFrames, splitting the data into training and testing sets. These datasets contain vital information about Titanic passengers, laying the foundation for analysis.
+Predicting survival outcomes from the Titanic disaster using machine learning and statistical analysis.
 
-Exploratory Data Analysis (EDA)
-During EDA, I explore the dataset thoroughly by:
+## 🎯 Objective
+This project aims to predict whether a passenger survived the Titanic shipwreck based on features like age, gender, ticket class, and fare. Understanding survival patterns has educational value and demonstrates real-world binary classification.
 
-Visualizing the distributions of key numerical features such as Age, SibSp (number of siblings/spouses aboard), Parch (number of parents/children aboard), and Fare.
-Analyzing relationships between different variables to identify potential correlations affecting survival chances.
-Detecting outliers and understanding data patterns to guide cleaning and feature engineering.
-Data Cleaning
-Data cleaning is crucial to improve model performance:
+## 📊 Dataset
+- Source: [Kaggle Titanic Competition](https://www.kaggle.com/c/titanic)
+- Features include:
+  - `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`, etc.
+  - Target variable: `Survived` (0 = No, 1 = Yes)
 
-Handling missing values through imputation strategies.
-Dropping irrelevant columns such as PassengerId, Cabin, Name, and Ticket.
-Creating new features or transforming existing ones to better capture underlying patterns that influence survival outcomes.
-Model Testing
-Multiple machine learning models are evaluated, including Decision Tree, LightGBM, XGBoost, RandomForest, ExtraTrees, and Logistic Regression. The best-performing model achieves an accuracy of approximately 73.8%, demonstrating its effectiveness in predicting passenger survival.
+## 🔍 Methodology
+- **Data Preprocessing**: Handling missing values, encoding categorical variables, feature selection
+- **Exploratory Data Analysis**: Visualizations and correlation analysis
+- **Feature Engineering**: Extracting titles, grouping ages, and creating new features
+- **Hypothesis Testing**:
+  - Chi-Square test performed to check dependency between `Sex` and `Survived`
+  - Result: Strong statistical evidence that survival was significantly dependent on gender
+- **Modeling**: Logistic Regression & other classifiers
+- **Evaluation**: Accuracy, precision, recall, F1-score, confusion matrix
 
-Test Submission
-Using the selected model, I predict survival on the test dataset and prepare a submission file. This step helps evaluate how well the model generalizes to unseen data and is essential for competition submissions.
+## 📈 Results
+- The model shows that gender was a strong predictor of survival.
+- Logistic Regression performed well with interpretable coefficients.
 
-Conclusion
-With an accuracy of 73.8%, the developed model demonstrates a strong ability to forecast Titanic passenger survival. This project illustrates the practical application of machine learning techniques on historical data and offers insights into the key factors influencing survival rates during the Titanic disaster.
+## 📚 Libraries Used
+- pandas, numpy, matplotlib, seaborn, scikit-learn, scipy
+
+## ✅ Conclusion
+Gender plays a key role in survival. Females had a significantly higher survival rate, confirmed by both EDA and hypothesis testing.
+
+## 📁 How to Run
+1. Clone the repo
+2. Install dependencies
+3. Run `Titanic_Survival_Prediction.ipynb`
+
+---
+
+**Author:** Afsaneh Shamsaddini
+
+
